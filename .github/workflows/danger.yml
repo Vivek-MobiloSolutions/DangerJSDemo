@@ -5,14 +5,14 @@ on: [pull_request]
 jobs:
     test:
       #os: [macos-13, macos-13-xl]
-      runs-on: macos-13
+      runs-on: ["macos-13"]
   
       steps:
       - uses: actions/checkout@master
       - name: Use Node.js 19.8.1
         uses: actions/setup-node@v1
         with:
-          node-version: '19.8.1'
+          node-version: ['19.8.1']
   
       - name: install yarn
         run: npm install -g yarn
